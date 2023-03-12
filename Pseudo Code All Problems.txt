@@ -1,0 +1,466 @@
+
+
+   Dinesh Bandi  Pseudo Code All Problems in One Document
+=============================================================
+
+1. Write a pseudo code to accept 3 subject marks and find ite total and average ?
+
+sol:     
+ 
+begin
+numeric subject1,subject2,subject3,total,average
+print("Enter marks for 3 subjects")
+
+input subject1
+input subject2
+input subject3
+
+total =subject1+subject2+subject3
+average=total/3
+
+print("total of 3 subjects is:"sum)
+print("average os 3 subjects is:" average)
+
+End
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+2.Write a pseudo code to find addition,subtraction,miltiplication,division of two numbers
+
+sol:
+
+begin
+numeric num1,num2,addition, subtraction,miltiplication,division
+print("Enter num1 and num2 values")
+input num1
+input num2
+sum=num1+num2
+subtraction=num1-num2
+multiplication=num1*num2
+division=num1/num2
+print("Addition is:"sum)
+print("SUbtraction is:"subtraction)
+print("Multiplication is:"multiplication)
+print("DIvision is:"Division)
+End
+
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+==================================================================================================
+
+
+3.Write a pseudo code to accept basicSalary and find grossSalary of an employee
+
+               grossSalary=HRA+DA+basocSalary
+                 HRA is 56% on basicSalary
+                  DA is 78% on basicSalary
+
+sol:
+
+begin
+numeric basicSalary,HRA,DA,grossSalary
+print("enter the basicSalary of the employee")
+
+input basicSalary
+input HRA
+input DA
+input grossSalary
+
+HRA=((56*basicSalary)/100)
+DA =((78*basicSalary)/100)
+grossSalary=HRA+DA+basicSalary
+
+print(" The grossSalary of the employee is:" grossSalary)
+
+end
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+4.Write a pseudo code to accept employee salary and 3 shopping bills and find total shopping
+  done and % of amount employee spent on shopping salary
+
+sol:
+
+begin
+numeric salary shopping1,shopping2,shopping3,total
+print("enter the salary of the employee if the month")
+
+input shopping1
+input shopping2
+input shopping3
+
+total=(shopping1+shopping2+shopping3)
+
+% of shopping done=((total*100)/salary)
+print("the & of shopping done is:" % of shopping done)
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+5.Write a pseudo code to check the given number is +ve or -ve or not
+
+sol:
+
+
+begin
+numeric num
+print("enter the number to check:")
+
+input num
+
+if(num>0)
+{
+  print("num" is +ve number)
+}
+else
+{
+  print("num" is -ve number)
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+6.Write a pseudo code to check the given number is even or odd
+
+sol:
+
+begin
+numeric num
+print("enter the number to check:")
+
+input num
+
+if(num%2=0)
+{
+  print("num" is even number)
+}
+else
+{
+  print("num" is odd number)
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+7.Write a pseudo code to check the person age is eligble for voting or not
+
+sol:
+
+begin
+numeric age
+print("enter the age:")
+
+input age
+
+if(num>=18)
+{
+  print("age:" person is eligble for voting)
+}
+else
+{
+  print("age:" person is not eligble for voting)
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+8.Write a pseudo code to accept 3 nos and fine big number
+
+sol:
+
+begin
+numeric num1,num2,num3
+print("enter num1,num2,num3 values to find big number")
+
+input num1
+input num2
+input num3
+
+if(num1>num2&&num1>num3)
+{
+  print("num1," is big number)
+}
+else if(num2>num3)
+{
+  print("num2," is big number)
+}
+else
+{
+  print("num3," is big number)
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+9.Write a pseudo code to accept week number and week day
+
+sol:
+
+begin
+numeric num
+print("enter the number:")
+
+input num
+
+if(num==1)
+{
+  print("it is Monday")
+}
+else if(num==2)
+{
+  print("it is Tuesday")
+}
+else if(num==3)
+{
+  print("it is Wednesday")
+}
+else if(num==4)
+{
+  print("it is Thursday")
+}
+else if(num==5)
+{
+  print("it is Friday")
+}
+else if(num==6)
+{
+  print("it is Saturday")
+}
+else if(num==7)
+{
+  print("it is SUnday")
+}
+else
+{
+  print("it is Invalid Number")
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+10.Write a pseudo code to accept project score , internal score, and external score
+----->   check if student is passed in 3 subjects or not  
+----->   (project,internal,external) pass mark is 50 in each
+----->   if person passed in 3 subjects then find the total score
+----->   to calculate total score follow the rules
+               70% score from Project
+               20% score from Project
+               10% score from Project
+
+-----> based on total score print grading also
+       90+  ---> A grade
+       70 to 90 ---> B grade
+       50 to 70 ---> C grade
+
+------> print failed subject name along with score
+
+sol:
+
+begin
+Numeric projectScore,internalScore, externalScore,total=0;
+print("Enter project, external and internal score");
+
+input projectScore
+input externalScore
+input internalScore
+
+if(projectScore>=50 && externalScore>=50 && internalScore>=50) 
+{
+  total=(70*projectScore)/100+(20*externalScore)/100+(10*internalScore)/100;
+      
+  if(total>=90)
+{
+  print("A grade");
+}
+  else if (total>=70) 
+{
+  print("B grade");
+}
+  else
+{
+  print("C grade");
+}
+}
+  else
+{
+  if(projectScore<50)
+{
+  print("failed in project and score is ",projectScore);
+ }
+  if(externalScore<50)
+{
+  print("failed in External and score is ",externalScore);
+}
+  if(internaltScore<50)
+{
+  print("failed in Internal and score is ",internalScore);
+}
+}
+
+end
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+             
+              
+11.write a pseudo code to accept vasic salary and find gross salary
+    grossSalary=HRA+DA+B.S
+
+    if basicSalary = 10000                then HRA is 67% on basicSalary
+                                           DA  is 78% on basicSalary
+
+    if basicSalary = 10000 to 20000       then HRA is 67% on basicSalary
+                                            DA  is 78% on basicSalary
+
+    if basicSalary  is 20000 and above    then HRA is 67% on basicSalary
+                                            DA  is 78% on basicSalary
+
+sol:
+  
+begin
+Numeric basicSalary,HRA,DA,grossSalary
+print("Enter basicSalary");
+
+input basicSalary
+input HRA
+input DA
+input grossSalary
+
+if(basicSalary=10000) 
+  
+{
+   HRA=((67*basicSalary)/100)
+   DA=((78*basicSalary)/100)
+   grossSalary=HRA+DA+basicSalary;
+   print("the gross salary is :" gorssSalary)
+}
+
+   else if (basicSalary<20000&& basicSalary>10000) 
+{
+    HRA=((69*basicSalary)/100)
+    DA=((79*basicSalary)/100)
+    grossSalary=HRA+DA+basicSalary;
+    print("the gross salary is :" gorssSalary)     
+}
+    else (basicSalary<20000)
+{
+    HRA=((75*basicSalary)/100)
+    DA=((85*basicSalary)/100)
+    grossSalary=HRA+DA+basicSalary;
+    print("the gross salary is :" gorssSalary) 
+}
+
+end
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+12.write a pseudo code to accept no of units from user and generate bill
+
+      First   50  units  Charge is 4.20/Unit
+      51  to 150  units  Charge is 5.67/Unit
+      150 to 250  units  Charge is 8.90/Unit
+      Above  250  units  Charge is 9.50/Unit
+
+    and add GST on 18% on bill and print with GST and without GST 
+
+
+sol:
+
+
+begin
+                                     
+Numeric units,bill
+print("Enter units to generate bill")
+
+input units
+ 
+if(units<=50)
+{
+   bill=units*4.20
+}
+   else if (units<=150)
+{
+   bill=(50*4.20)+(units-50)*5.67
+}
+   else if (units<=250)
+{
+   bill=(50*4.20)+(100*5.67)+(units-150)*8.90
+}
+   else
+{
+   bill=(50*4.20)+(100*5.67)+(100*8.90)+(units-250)*9.50
+}
+   print("Bill without GST: ",bill)
+   bill=bill+(bill*18)/100
+   print("Bill with GST: ",bill)
+End
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
