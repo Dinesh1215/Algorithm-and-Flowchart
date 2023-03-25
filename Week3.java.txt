@@ -1,0 +1,352 @@
+
+
+
+
+      Week 3 array topic and programs based on arrays
+
+=======================================================================================================================
+//print even numbers between 1 to n
+
+
+import java.util.Scanner;
+ class Example8 
+{
+    private static Scanner sc;
+    public static void main(String[] args) 
+    {
+        int number;
+        int i;
+        sc = new Scanner(System.in);
+        
+        System.out.print(" enter the number:");
+        number = sc.nextInt();    
+        
+        for(i = 1; i <= number; i++)
+        {
+            if(i % 2 == 0)
+            {
+                System.out.print(i +"\t"); 
+            }
+        }    
+    }
+}
+
+
+=======================================================================================================================
+
+// array sample problems
+
+// array index out of bonds
+
+
+import java.util.Scanner;
+public class Array4
+  {
+    public void removeFirstElement()
+    {
+      Scanner sc=new Scanner(System.in);
+      int[]arr=new int[6];
+
+      for(int i=0;i<arr.length;i++)
+        {
+        System.out.println("Enter the number:"+(i+1));
+        arr[i] =sc.nextInt();       
+        }
+      
+      int[] newArr=new int[5];
+
+      for(int i=1;i<=arr.length;i++)
+        {
+          newArr[i-1]=arr[i];
+          
+        }
+      for(int i=0;i<newArr.length;i++)
+        {
+          System.out.println(newArr[i]);
+        }
+    }
+
+    public static void main(String args[])
+    {
+      Array4 obj=new Array4();
+      obj.removeFirstElement();
+    }
+    
+  }
+
+
+=======================================================================================================================
+
+// array descending  order
+
+import java.util.Scanner;
+public class ArrayAscending
+  {
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int arr[]=new int[5];
+
+      for(int i=0;i<arr.length;i++)
+        {
+          System.out.println("Enter the number:" +(i+1));
+          arr[i]=sc.nextInt();
+        }
+    // sorting in acsending order or for descending order in below
+      
+      for(int i=0;i<arr.length;i++)
+        {
+          for(int j=1+i;j<arr.length;j++)
+            {
+              if(arr[i]>arr[j])
+              {
+                int c=arr[i];
+                arr[i]=arr[j];
+                arr[j]=c;
+              }
+            }
+        }
+
+      for(int i=0;i<arr.length;i++)
+        {
+          System.out.println(arr[i]);
+        }
+    }
+  }
+
+
+
+=======================================================================================================================
+
+// array descending  order
+
+import java.util.Scanner;
+public class ArrayDescending
+  {
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int arr[]=new int[5];
+
+      for(int i=0;i<arr.length;i++)
+        {
+          System.out.println("Enter the number:" +(i+1));
+          arr[i]=sc.nextInt();
+        }
+    // sorting in acsending order or for descending order in below
+      
+      for(int i=0;i<arr.length;i++)
+        {
+          for(int j=1+i;j<arr.length;j++)
+            {
+              if(arr[i]<arr[j])
+              {
+                int c=arr[i];
+                arr[i]=arr[j];
+                arr[j]=c;
+              }
+            }
+        }
+
+      for(int i=0;i<arr.length;i++)
+        {
+          System.out.println(arr[i]);
+        }
+    }
+  }
+
+
+
+=======================================================================================================================
+
+
+// array maximum and minimum value 
+
+import java.util.Scanner;
+  public class ArrayMinMax
+  {
+    public static void main(String args[])
+    {
+      int i,max=0;
+      Scanner sc=new Scanner(System.in);
+      int arr[]=new int[4];
+
+      System.out.println("Enter your array values:");
+
+      for(i=0;i<arr.length;i++)
+        {
+          arr[i]=s.nextInt();
+        }
+      int min=arr[o];
+      for(i=0;i<arr.length;i++)
+        {
+          if(arr[i>max])
+          {
+            max=arr[i];
+          }
+        }
+      System.out.println("Maximum value in array is :"+max);
+      for(i=0;i<arr.length;i++)
+        {
+          if(arr[i]<min)
+          {
+            min=arr[i];
+          }
+        }
+      System.out.println("Minimum value in array is :" +min");
+    }
+  }
+
+
+
+
+=======================================================================================================================
+
+/* 1st number to be removed in this program 
+
+enter numbers
+10
+20
+30
+40
+50
+
+output :
+20
+30
+40
+50
+
+  */
+
+// array sample program
+
+import java.util.Scanner;
+
+public class Arrays 
+   {
+  public static void main(String args[]) 
+   {
+    Scanner sc = new Scanner(System.in);
+    int[] arr = new int[5];
+
+    for (int i = 0; i < arr.length; i++)  
+    {
+      System.out.println("Enter the number :" + (i + 1));
+      arr[i] = sc.nextInt();
+    }
+
+    int[] newArr = new int[4];
+
+    newArr[0] = arr[1];
+    newArr[1] = arr[2];
+    newArr[2] = arr[3];
+    newArr[3] = arr[4];
+
+    for (int i = 1; i <= newArr.length; i++)
+      {
+      newArr[i - 1] = arr[i];
+      }
+    for (int i = 0; i < newArr.length; i++) 
+    {
+      System.out.println(newArr[i]);
+    }
+
+  }
+}
+
+
+
+=======================================================================================================================
+
+
+// array sample program 
+
+
+import java.util.Scanner;
+public class ArraySample
+  {
+    public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int[] arr=new int[5];
+
+      for(int i=0;i<arr.length;i++)
+        {
+          System.out.println("enter number :" +(i+1));
+          arr[i]=sc.nextInt();
+        }
+      for(int j=0;j<=arr.length;j++)
+        {
+          System.out.println( "Output :" +(arr[j]));
+          
+        }
+    }
+  }
+
+
+
+=======================================================================================================================
+
+
+// array sample program
+
+
+import java.util.Scanner;
+public class ArraySampleProgram
+{
+public void removeFirstElement(int[] arr1)
+  
+  {
+     int j=0;                            
+     int[] new Arr=new int[4];            
+          
+      for( j=0;j<new Arr.length;j++)
+      {              
+         new Arr[j]=arr1[j];
+      }
+      for(int i=0;i<new Arr.length;i++)
+      {
+        System.out.println(new Arr[i]);
+      }
+} 
+  
+  public static void main(String args[])
+  {
+      Scanner sc=new Scanner(System.in);
+      int[] arr=new int[5];
+     for(int j=0;j<arr.length;j++)
+     {
+       System.out.println("Enter number "+ (j+1));
+       arr[j]=sc.nextInt();
+      }
+    
+      Main obj=new Main();
+     obj.removeFirstElement(arr);
+}
+}
+
+
+=======================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
