@@ -1,0 +1,309 @@
+
+
+     2nd Week Programs Completed 
+  all the programs are in ine folder
+
+=======================================================================================================================
+
+
+// enter basic salary and find HRA , DA and gross salary
+
+import java.util.Scanner;
+class Salary
+      {
+        public static void main(String args[])
+        {
+          Scanner s = new Scanner(System.in);
+          System.out.println("enter the basic salary");
+            int bs=s.nextInt();
+
+          int hra,da,gs;
+          
+          
+           hra=((75*bs)/100);
+           da=((78*bs)/100);
+           gs=bs+hra+da;
+
+          System.out.println(gs + " is the gross salary of employee");
+          
+          
+        }
+      }
+
+
+=======================================================================================================================
+
+
+// to check weather entered number is even or odd
+
+import java.util.Scanner;
+class EvenOdd {
+
+  public static void main(String args[]) {
+
+    Scanner s = new Scanner(System.in);
+
+    int num = 0;
+    System.out.println("Enter number to check it is +ve or -ve");
+    num = s.nextInt();
+
+    if (num >= 0) {
+      System.out.println(num + " is +ve number");
+    } else {
+      System.out.println(num + " is -ve number");
+    }
+
+  }
+
+}
+
+
+=======================================================================================================================
+
+
+// program to check person is eligble for voting or not
+
+import java.util.Scanner;
+
+class CheckVotingAge {
+
+  public static void main(String args[]) {
+
+    Scanner s = new Scanner(System.in);
+
+    int num = 0;
+    System.out.println("Enter number to check person is eligble for voting or not");
+    num = s.nextInt();
+
+    if (num >= 18) {
+      System.out.println(num + " is eligble for voting");
+    } else {
+      System.out.println(num + " is not eligble for voting");
+    }
+
+  }
+
+}
+
+
+=======================================================================================================================
+
+
+// enter 3 numbers and check the big numbers
+
+import java.util.Scanner;
+class BigNumber
+  {
+    public static void main(String args[])
+    {
+      Scanner s=new Scanner(System.in);
+      int num1=0;
+      int num2=0;
+      int num3=0;
+      System.out.println("Enter the Number 1 value:");
+      System.out.println("Enter the Number 2 value:");
+      System.out.println("Enter the Number 3 value:");
+
+      num1=s.nextInt();
+      num2=s.nextInt();
+      num3=s.nextInt();
+
+      if(num1>num2&&num1>num3)
+      {
+        System.out.println(num1+"is big number");
+      }
+      else if(num2>num3)
+      {
+        System.out.println(num2+"is big number");
+      }
+      else
+      {
+        System.out.println(num3+"is big number");
+      }
+    }
+  }
+
+
+=======================================================================================================================
+
+// sample program to print Hello Welcome to Java World
+
+
+class Example1
+  {
+    public static void main(String args[])
+    {
+      System.out.println("Hello Welcome to Java World");
+    }
+  }
+
+
+=======================================================================================================================
+
+
+// java program to print sum of 2 numbers
+
+class Example2
+  {
+    public static void main(String args[])
+    {
+      int a=90,b=35;
+      int sum;
+      sum=a+b;
+      System.out.println("Addition is : " +sum);
+    }
+  }
+
+=======================================================================================================================
+
+
+// to print addition,subtraction,multiplication and division of 2 numbers
+
+class Example3 {
+  public static void main(String args[]) {
+    int a = 100;
+    int b = 50;
+
+    int sum = a + b;
+    int sub = a - b;
+    int multi = a * b;
+    int div = a / b;
+
+    System.out.println("Sum of two numbers is :" + sum);
+    System.out.println("Subtraction of two numbers is :" + sub);
+    System.out.println("Multiplication of two numbers is :" + multi);
+    System.out.println("Division of two numbers is :" + div);
+  }
+}
+
+
+=======================================================================================================================
+
+// to find average and total of given 3 subjects 
+
+class Example4
+  {
+    public static void main(String args[])
+    {
+      int a=60;
+      int b=68;
+      int c=75;
+      int total,average;
+
+      total=a+b+c;
+      average=total/3;
+
+      System.out.println("The total of 3 subjects is :" +total);
+      System.out.println("The average of 3 subjects is :" +average);
+    }
+  }
+
+
+=======================================================================================================================
+
+// WAP to accept employee salary and 3 shopping bills and fine the %of shopping spent on shopping on employee salary
+
+
+class Example5
+  {
+    public static void main(String args[])
+    {
+      int salary=100000;
+      int shoppingBill1=13000;
+      int shoppingBill2=23000;
+      int shoppingBill3=35000;
+
+      int total,percentage;
+      total=shoppingBill1+shoppingBill2+shoppingBill3;
+      percentage=((total*100)/salary);
+
+      System.out.println("The total shopping done is :" +total);
+      System.out.println("The percentage shopping done is :" +percentage);
+    }
+  }
+
+
+
+
+=======================================================================================================================
+
+
+/* to enter basic salary of an employee and find gross salary
+     basic salary is 75000;
+     hra is 75% on basic salary;   
+      da is 79% on basic salary
+           and find gross salary*/
+
+
+    class Example6
+      {
+        public static void main(String args[])
+        {
+          int basicSalary=75000;
+          int HRA,DA,grossSalary;
+          HRA=((75*basicSalary)/100);
+           DA=((78*basicSalary)/100);
+          grossSalary=basicSalary+HRA+DA;
+
+          System.out.println("The gross salary of the employee is :" +grossSalary);
+          
+          
+        }
+      }
+
+
+
+=======================================================================================================================
+
+class Example7
+  {
+    public static void main(String args[])
+    {
+      String srt="bitLabs";
+      
+      int a=100,b=200;
+      System.out.println("str+100+200");
+    }
+  }
+
+
+
+=======================================================================================================================
+
+//print even numbers between 1 to n
+
+
+import java.util.Scanner;
+ class Example8 
+{
+    private static Scanner sc;
+    public static void main(String[] args) 
+    {
+        int number;
+        int i;
+        sc = new Scanner(System.in);
+        
+        System.out.print(" enter the number:");
+        number = sc.nextInt();    
+        
+        for(i = 1; i <= number; i++)
+        {
+            if(i % 2 == 0)
+            {
+                System.out.print(i +"\t"); 
+            }
+        }    
+    }
+}
+
+
+
+
+
+
+=======================================================================================================================
+
+
+
+
+
