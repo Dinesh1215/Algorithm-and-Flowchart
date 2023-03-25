@@ -1,0 +1,480 @@
+
+
+Week 2 Conditional Statements topic and programs
+
+=======================================================================================================================
+/* to enter n values and print max value
+how many values do ypu want to print to enter:5
+enter your 5 values:
+23
+89
+11
+44
+76
+
+output : 89
+
+
+  */
+
+import java.util.Scanner;
+
+class Example1 {
+  public static void main(String args[])
+    {
+      Scanner s=new Scanner(System.in);
+      int num1=0;
+      int num2=0;
+      int num3=0;
+      int num4=0;   
+      int num5=0;
+   System.out.println("enter num1,num2,num3,num4,num5 values:");
+      
+      num1=s.nextInt();
+      num2=s.nextInt();
+      num3=s.nextInt();
+      num4=s.nextInt();
+      num5=s.nextInt();
+
+      
+      if(num1>num2 && num1>num3 && num1>num4 && num1>num5)
+    {
+      System.out.println("max value is:" +num1);
+    }
+      else if(num2>num3 && num2>num4 && num2>num5)
+        {
+      System.out.println("max value is:" +num2);
+        }
+      else if(num3>num4 && num3>num5)
+      {
+        System.out.println("max value is:" +num3);
+      }
+      else if(num4>num5)
+      {
+        System.out.println("max value is:" +num4);
+      }
+      else
+      {
+        System.out.println("max value is:" +num5);
+      }
+      
+
+    }
+}
+
+
+
+
+=======================================================================================================================
+/* to enter n values and print min value
+how many values do ypu want to print to enter:5
+enter your 5 values:
+23
+89
+11
+44
+76
+
+output : 
+
+
+  */
+
+import java.util.Scanner;
+
+class Example2 
+{
+  public static void main(String args[])
+    {
+      Scanner s=new Scanner(System.in);
+      int num1=0;
+      int num2=0;
+      int num3=0;
+      int num4=0;   
+      int num5=0;
+   System.out.println("enter num1,num2,num3,num4,num5 values:");
+      
+      num1=s.nextInt();
+      num2=s.nextInt();
+      num3=s.nextInt();
+      num4=s.nextInt();
+      num5=s.nextInt();
+
+      
+      if(num1<num2 && num1<num3 && num1<num4 && num1<num5)
+    {
+      System.out.println("min value is:" +num1);
+    }
+      else if(num2<num3 && num2<num4 && num2<num5)
+        {
+      System.out.println("min value is:" +num2);
+        }
+      else if(num3<num4 && num3<num5)
+      {
+        System.out.println("min value is:" +num3);
+      }
+      else if(num4<num5)
+      {
+        System.out.println("min value is:" +num4);
+      }
+      else
+      {
+        System.out.println("min value is:" +num5);
+      }
+      
+
+    }
+}
+
+
+
+=======================================================================================================================
+/* to enter n values and print 1st and 2nd max values value
+how many values do ypu want to print to enter:5
+enter your 5 values:
+23
+89
+11
+44
+76
+
+output : max:89
+       2nd max:76
+  */
+
+import java.util.Scanner;
+
+public class Example3
+  {
+  public static void main(String[] args) 
+  {
+    Scanner sc = new Scanner(System.in);
+    int n;
+    int firstMax;
+    int secondMax;
+    System.out.print("Enter the number of values:");
+
+           n = sc.nextInt();
+    firstMax = sc.nextInt();
+    secondMax =sc .nextInt();
+
+    for (int i = 0; i < n; i++) 
+    {
+      System.out.print("Enter a value " + (i + 1) + ": ");
+      int value = sc.nextInt();
+      if (value > n) 
+      {
+        secondMax=n;
+        n=value;
+      } 
+        else if (value>secondMax&&value!=n)
+        {
+        secondMax=value;
+        }
+    }
+    System.out.println("Maximum value: " +n);
+    if (secondMax==n) 
+    {
+      System.out.println("There is no second maximum value.");
+    } 
+      else 
+    {
+      System.out.println("Second maximum value: " + secondMax);
+    }
+  }
+}
+
+
+
+=======================================================================================================================
+
+import java.util.Scanner;
+
+class Hotel
+  {
+  public static void main(String args[])
+    {
+
+      Scanner s=new Scanner(System.in);
+      
+      System.out.println("**********Welcome to Village HOtel**********");
+      System.out.println("*****Menu*****");
+
+      System.out.println("1.PlainDosa---50rs");
+      System.out.println("2.OnionDosa---60rs");
+      System.out.println("3.Poori---50rs");
+      System.out.println("4.Punugu---50rs");
+      System.out.println("5.ChickenBiryani---250rs");
+      System.out.println("6.MuttonBiryani---350rs");
+      System.out.println("Choose your options");
+      
+      int option=s.nextInt();
+      
+      switch(option)
+                {
+          case 1:
+              {
+                  plaindosa();
+                  break;
+              }
+          case 2:
+              {
+                  oniondosa();
+                  break;
+              }
+          case 3:
+              {
+                  poori();
+                  break;
+              }
+          case 4:
+              {
+                  punugu();
+                  break;
+              }
+          case 5:
+              {
+                  chickenbiryani();
+                  break;
+              }
+          case 6:
+              {
+                  muttonbiryani();
+                  break;
+              }
+          default:
+              {
+                  System.out.println("selected items are not there");    
+              }
+                }
+        
+
+        while(option!=0);
+        {
+        
+        }
+        
+        }
+  }
+
+=======================================================================================================================
+
+Patterns
+
+/* to print pattern using ****
+                          ****   square
+                          ****
+                          ****  */
+
+
+class Pattern
+{
+  public static void main(String args[])
+  {
+    for(int i=0;i<9;i++)
+      {
+        for(int j=0;j<i;j++)
+      {
+        System.out.print("*");
+      }
+    System.out.println("*");
+  }
+}
+}
+
+
+
+=======================================================================================================================
+
+/* to print pattern using ****
+                          *** right triangle downwards
+                          **
+                          *  */
+
+
+class Pattern1
+{
+  public static void main(String args[])
+  {
+    for(int i=0;i<5;i++)
+      {
+        for(int j=5;j>i;j--)
+      {
+        System.out.print("*");
+      }
+    System.out.println("");
+  }
+}
+}
+
+
+
+=======================================================================================================================
+/* to print pattern using *
+                          ** right triangle upwards
+                          ***
+                          **** */
+
+class Pattern2 {
+  public static void main(String args[]) {
+    for (int i = 0; i < 9; i++) {
+      for (int j = 0; j <= i; j++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+    }
+  }
+}
+
+
+
+=======================================================================================================================
+
+/* to print pattern using    *
+                            * *     triangle shape
+                           * * *
+                          * * * *  */
+
+
+
+class Pattern3
+  {
+    public static void main(String args[])
+    {
+      for(int i=0;i<5;i++)
+        {
+          for(int j=5;j>i;j--)
+            {
+              System.out.print("");
+            }
+          for(int j=0;j<=i;j++)
+            {
+              System.out.println("" +"");
+            }
+          System.out.println();
+        }
+    }
+  }
+
+
+=======================================================================================================================
+
+
+
+import java.util.Scanner;
+public class Restaurants {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        boolean quit= false;
+        int sum=0;
+        int wine=200,cold=20,bear=400,juice=100;
+        String order="";
+        
+        do{
+            System.out.println("ITEM"+"\t\tPrice");
+            System.out.println("1.Wine"+"\t\t"+"200");
+            System.out.println("2.ColdDrink"+"\t"+"20");
+            System.out.println("3.Bear"+"\t\t"+"400");
+            System.out.println("4.Juice"+"\t\t"+"100");
+            System.out.println("5.Quit");
+            
+            int choice=input.nextInt();
+            
+            switch(choice){
+                case 1:System.out.println("Wine"+"\n");
+                        sum=sum+wine;
+                        order=order.concat("wine"+"\n");
+                        
+                    break;
+                case 2:
+                    System.out.println("ColdDrink");
+                    sum=sum+cold;
+                    order=order.concat("ColdDrink"+"\n");
+                    
+                       break;
+                case 3:
+                    System.out.println("Bear");
+                    sum=sum+bear;
+                    order=order.concat("Bear"+"\n");
+                      break;
+                case 4:
+                    System.out.println("Juice");
+                    sum=sum+juice;
+                    order=order.concat("Juice"+"\n");
+                    break;
+                case 5:
+                     quit=true;
+                     
+                    break;
+                default:
+                    System.out.println("Wrong input");
+            }
+        
+        }while(!quit);
+       
+        System.out.println("Your Orders are:\n"+order);
+        System.out.println("Your total bill="+sum);
+        
+         System.out.println("Thank you");
+    
+        
+        
+        
+    
+    }
+    
+}
+
+
+
+=======================================================================================================================
+
+
+import java.util.Scanner;
+public class SalaryTds
+  {
+    public static void main(String args[])
+    {
+      double tds=0;
+      Scanner s=new Scanner(System.in);
+      System.out.println("Enter your salary");
+      double salary =s.nextInt();
+      
+      if(salary<=700000)
+      {
+        System.out.println("No TDS");
+      }
+      else if(salary<=1000000)
+      {
+        tds=(0.05*(salary-700000));
+      }
+      else if(salary<=1300000)
+      {
+        tds=(0.1*(salary-1000000))+(0.05*300000);
+      }
+       else if(salary<=1600000)
+      {
+        tds=(0.15*(salary-1300000)+(0.1*300000))+(0.05*300000);
+      }
+      else if(salary<=1900000)
+      {
+        tds=(0.2*(salary-1600000)+0.15*(300000)+(0.1*300000))+(0.05*300000);
+      }
+       else
+      {
+        tds=(0.3*(salary-1900000))+0.2*(300000)+0.15*(300000)+(0.1*300000)+(0.05*300000);
+      }
+      
+      salary=salary-tds;
+      System.out.println("Salary is"+salary);
+      System.out.println("TDS Amount is"+tds);
+     
+    }
+  }
+
+
+
+=======================================================================================================================
