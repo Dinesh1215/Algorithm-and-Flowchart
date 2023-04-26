@@ -1,0 +1,224 @@
+
+
+Files concepts in java
+
+
+Program 1
+===========
+===========
+import java.io.*;
+
+public class Program1
+  {
+  public static void main(String[] args) 
+    {
+    try {
+
+      BufferedReader br = new BufferedReader(new FileReader("ProIn.txt"));
+      BufferedWriter bw = new BufferedWriter(new FileWriter("ProOut.txt"));
+
+      String line = null;
+
+      while ((line = br.readLine()) != null) 
+      {
+        String[] str = line.split(" ");
+        int[] freq = new int[str.length];
+
+        for (int i = 0; i < str.length; i++) 
+        {
+          int count = 1;
+          for (int j = i + 1; j < str.length; j++) 
+          {
+            if (str[i].equalsIgnoreCase(str[j]))
+            {
+              count++;
+              freq[j] = -1;
+            }
+          }
+          if (freq[i] != -1) 
+          {
+            freq[i] = count;
+            System.out.println("Frequency of " + str[i] + " is " + freq[i]);
+          }
+        }
+
+        int max = 0, max1 = 0, max2 = 0;
+        String word = null, word1 = null, word2 = null;
+        for (int i = 0; i < freq.length; i++) 
+        {
+          if (freq[i] != -1)
+          {
+            if (max < freq[i])
+            {
+              max = freq[i];
+              word = str[i];
+            } 
+            else if (max1 < freq[i]) 
+            {
+              max1 = freq[i];
+              word1 = str[i];
+            } 
+            else if (max2 < freq[i]) 
+            {
+              max2 = freq[i];
+              word2 = str[i];
+            }
+          }
+        }
+        int density = (max * 100) / freq.length;
+        int density1 = (max1 * 100) / freq.length;
+        int density2 = (max2 * 100) / freq.length;
+        bw.write("\nMost frequent word is " + word + " and its density is " + density);
+        bw.write("\nSecond most frequent word is " + word1 + " and its density is " + density1);
+        bw.write("\nThird most frequent word is " + word2 + " and its density is " + density2);
+        bw.flush();
+      }
+    } 
+    catch (Exception e)
+      {
+      System.out.println(e);
+    }
+  }
+}
+
+
+// we have to give data in input text file and we can see automatically output
+
+
+Input Text file
+
+hello Dinesh i am fine how are you doing today well
+
+Output Text file 
+
+
+Frequency of hello is 1
+Frequency of Dinesh is 1
+Frequency of i is 1
+Frequency of am is 1
+Frequency of fine is 1
+Frequency of how is 1
+Frequency of are is 1
+Frequency of you is 1
+Frequency of doing is 1
+Frequency of today is 1
+Frequency of well is 1
+
+
+Most frequent word is hello and its density is 9
+Second most frequent word is Dinesh and its density is 9
+Third most frequent word is i and its density is 9
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+Program 2
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Program2
+  {
+  public static void main(String[] args) 
+    {
+    try 
+      {
+      FileReader fr = new FileReader("data.txt");
+      BufferedReader br = new BufferedReader(fr);
+
+      String input = br.readLine();
+      String[] words = input.split(" ");
+
+      int[] freq = new int[words.length];
+
+      for (int i = 0; i < words.length; i++)
+        {
+        freq[i] = 1;
+        for (int j = i + 1; j < words.length; j++)
+          {
+          if (words[i].equalsIgnoreCase(words[j]))
+          {
+            freq[i]++;
+            words[j] = " ";
+
+          }
+
+        }
+
+      }
+     
+    
+     
+      int max1 = 0, max2 = 0, max3 = 0;
+
+      String word1 = null, word2 = null;
+
+      max1 = (freq[0] * 100) / words.length;
+      word1=words[0];
+      for (int i = 0; i < freq.length; i++)
+        {
+        if (!words[i].equals(" ")) 
+        {
+          System.out.println(words[i] + " appears " + freq[i] + " times.");
+          if (max1 < (freq[i] * 100) / words.length) {
+            max2 = max1;
+            word2 = word1;
+        
+            max1 = (freq[i] * 100) / words.length;
+            word1 = words[i];
+            
+          }
+          else if (max2 < (freq[i] * 100) / words.length) 
+          {
+            max2 = (freq[i] * 100) / words.length;
+            word2 = words[i];
+          }
+        }
+
+      }
+
+      System.out.println(" ");
+      System.out.println(word1 + " " + "  Den 1  " + max1);
+      System.out.println(word2 + " " + " Den 2  " + max2);
+      System.out.println();
+      System.out.println("-----------------------------");
+
+      br.close();
+    } catch (
+
+    IOException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+
+
+OutPut
+
+Most appears 1 times.
+frequent appears 1 times.
+word appears 1 times.
+is appears 2 times.
+hello appears 1 times.
+and appears 1 times.
+its appears 1 times.
+density appears 1 times.
+9 appears 1 times.
+ 
+is   Den 1  20
+Most  Den 2  10
+
+-----------------------------
+
+
+
+
+
+
+
+
+
